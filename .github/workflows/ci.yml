@@ -1,0 +1,16 @@
+name: CI Check
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+   lint:
+    runs-on: ubuntu-latest
+    steps: 
+     - uses: actions/checkout@v4
+
+     - name: run basic Check
+       run: |
+          echo "runnung CI check"
+          test -f README.md
